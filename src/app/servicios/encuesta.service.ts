@@ -7,7 +7,7 @@ import { Observable } from 'rxjs'
   providedIn: 'root'
 })
 export class EncuestaService {
-  url='http://127.0.0.1:8000/api/encuestass/';
+  url='http://127.0.0.1:8000/api/encuestass';
 
   constructor(private http:HttpClient){}
 
@@ -31,13 +31,13 @@ export class EncuestaService {
 
   getEncuesta(id:string, access_token:any):Observable<any>{
     const options = this.obtenerOptions(access_token);
-    return this.http.get(this.url+id, options);
+    return this.http.get(this.url+"/"+id, options);
   }
 
 
   deleteEncuesta(id:string, access_token:any): Observable<any>{
     const options = this.obtenerOptions(access_token);
-    return this.http.delete(this.url+id, options);
+    return this.http.delete(this.url+"/"+id, options);
   }
 
  

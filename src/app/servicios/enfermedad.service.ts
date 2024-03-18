@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 
 export class EnfermedadService {
 
-  url='http://127.0.0.1:8000/api/enfermedades/';
+  url='http://127.0.0.1:8000/api/enfermedades';
 
   constructor(private http:HttpClient){}
 
@@ -36,16 +36,16 @@ export class EnfermedadService {
 
   getEnfermedad(id:string, access_token:any):Observable<any>{
     const options = this.obtenerOptions(access_token);
-    return this.http.get(this.url+id, options);
+    return this.http.get(this.url+"/"+id, options);
   }
 
   updateEnfermedad(id:string, enfermedad:Enfermedad, access_token:any): Observable<any>{
     const options = this.obtenerOptions(access_token);
-    return this.http.put(this.url+id, enfermedad, options);
+    return this.http.put(this.url+"/"+id, enfermedad, options);
   }
 
   deleteEnfermedad(id:string, access_token:any): Observable<any>{
     const options = this.obtenerOptions(access_token);
-    return this.http.delete(this.url+id, options);
+    return this.http.delete(this.url+"/"+id, options);
   }
 }

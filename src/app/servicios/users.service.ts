@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UsersService {
 
-  url='http://127.0.0.1:8000/api/auth/user/';
+  url='http://127.0.0.1:8000/api/auth/user';
 
   constructor(private http:HttpClient){}
 
@@ -34,16 +34,16 @@ export class UsersService {
 
   getUser(id:string, access_token:any):Observable<any>{
     const options = this.obtenerOptions(access_token);
-    return this.http.get(this.url+id, options);
+    return this.http.get(this.url+"/"+id, options);
   }
 
   updateUser(id:string, enfermedad:User, access_token:any): Observable<any>{
     const options = this.obtenerOptions(access_token);
-    return this.http.put(this.url+id, enfermedad, options);
+    return this.http.put(this.url+"/"+id, enfermedad, options);
   }
 
   deleteUser(id:string, access_token:any): Observable<any>{
     const options = this.obtenerOptions(access_token);
-    return this.http.delete(this.url+id, options);
+    return this.http.delete(this.url+"/"+id, options);
   }
 }

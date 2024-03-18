@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CaloriasHasDietasService {
 
-  url='http://127.0.0.1:8000/api/caloriasDietas/';
+  url='http://127.0.0.1:8000/api/caloriasDietas';
   
   constructor(private http:HttpClient){
   }
@@ -35,17 +35,17 @@ export class CaloriasHasDietasService {
 
   getCaloriaDieta(id:string, access_token:any):Observable<any>{
     const options = this.obtenerOptions(access_token);
-    return this.http.get(this.url+id, options);
+    return this.http.get(this.url+"/"+id, options);
   }
 
   updateCaloriaDieta(id:string, caloriaDieta:CaloriasHasDietas, access_token:any): Observable<any>{
     const options = this.obtenerOptions(access_token);
-    return this.http.put(this.url+id, caloriaDieta, options);
+    return this.http.put(this.url+"/"+id, caloriaDieta, options);
   }
 
   deleteCaloriaDieta(id:string, access_token:any): Observable<any>{
     const options = this.obtenerOptions(access_token);
-    return this.http.delete(this.url+id, options);
+    return this.http.delete(this.url+"/"+id, options);
   }
 
 }

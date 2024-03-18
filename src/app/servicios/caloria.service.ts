@@ -8,7 +8,7 @@ import { Observable } from 'rxjs'
 })
 export class CaloriaService {
 
-  url='http://127.0.0.1:8000/api/caloriass/';
+  url='http://127.0.0.1:8000/api/caloriass';
 
   constructor(private http:HttpClient){}
 
@@ -32,13 +32,13 @@ export class CaloriaService {
 
   getCaloria(id:string, access_token:any):Observable<any>{
     const options = this.obtenerOptions(access_token);
-    return this.http.get(this.url+id, options);
+    return this.http.get(this.url+"/"+id, options);
   }
 
 
   deleteCaloria(id:string, access_token:any): Observable<any>{
     const options = this.obtenerOptions(access_token);
-    return this.http.delete(this.url+id, options);
+    return this.http.delete(this.url+"/"+id, options);
   }
 
   
