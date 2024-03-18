@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class DietaService {
 
-  url='http://127.0.0.1:8000/api/dietas';
+  url='http://smarthabits.api.adsocidm.com/api/dietas';
   constructor(private http:HttpClient){
   }
   obtenerOptions(access_token:any){

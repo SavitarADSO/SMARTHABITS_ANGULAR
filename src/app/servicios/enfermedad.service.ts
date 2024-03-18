@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 
 export class EnfermedadService {
 
-  url='http://127.0.0.1:8000/api/enfermedades';
+  url='http://smarthabits.api.adsocidm.com/api/enfermedades';
 
   constructor(private http:HttpClient){}
 

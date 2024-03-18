@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class EjercicioService {
 
-  url='http://127.0.0.1:8000/api/ejercicios';
+  url='http://smarthabits.api.adsocidm.com/api/ejercicios';
   
   constructor(private http:HttpClient){
   }

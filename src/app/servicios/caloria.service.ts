@@ -8,7 +8,7 @@ import { Observable } from 'rxjs'
 })
 export class CaloriaService {
 
-  url='http://127.0.0.1:8000/api/caloriass';
+  url='http://smarthabits.api.adsocidm.com/api/caloriass';
 
   constructor(private http:HttpClient){}
 
