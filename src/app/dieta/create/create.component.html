@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form [formGroup]="dietaForm" (ngSubmit)="agregarDieta()" action="" class="form-ficha example-form" id="formenfermedad">
+        <title>Crear enfermedad</title>
+        <h1>Informacion de la dieta</h1>
+
+        <div id="dietadiv">
+
+            <p>Tipo de dieta</p>
+
+            <mat-form-field class="example-form-field">
+                <input formControlName="diet_type" matInput type="text" name="diet_type">
+                <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field><br>
+            <p>Comidas recomendadas</p>
+
+            <mat-form-field class="example-form-field">
+                <input formControlName="recommended_foods" matInput type="text" name="recommended_foods">
+                <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field><br>
+        </div>
+
+        <button mat-raised-button color="primary">Crear</button>
+    </form>
+</body>
+
+</html>

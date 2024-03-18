@@ -1,0 +1,20 @@
+<body>
+    <form [formGroup]="caloriaDietaForm" (ngSubmit)="agregarCaloriaDieta()" action="" class="form-ficha example-form" id="caloriaDietaForm">
+        
+        <div id="dietadiv">
+            <h1>Crear relación usuario y dieta</h1>
+            
+            <p>Seleccione el nombre del usuario</p>
+            <select formControlName="caloria_id">
+                <option *ngFor="let caloria of calorias" [value]="caloria.id">{{caloria.users_id}}</option>
+            </select><br>
+
+            <p>Seleccione una dieta</p>
+            <select formControlName="dieta_id">
+                <option *ngFor="let dieta of dietas" [value]="dieta.id">{{dieta.recommended_foods}}</option>
+            </select><br>
+        </div>
+
+        <button type="submit" mat-raised-button color="primary">Crear</button>
+    </form>
+</body>

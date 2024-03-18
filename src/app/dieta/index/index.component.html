@@ -1,0 +1,28 @@
+<h1>
+  <nav>
+    <a href="/dieta/create" *ngIf="clave !=null"  id="dieta">Crear dieta</a>
+  </nav> 
+</h1> 
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tipo de dieta</th>
+        <th>Dieta</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dieta of listaDietas">
+        <td>{{dieta.id}}</td>
+        <td>{{dieta.diet_type}}</td>
+        <td>{{dieta.recommended_foods}}</td>
+        <td>
+          
+          <button type="button" id="eli"   (click)="editarDieta(dieta.id)">Editar</button>
+          <button type="button" id="bor" (click)="eliminarDieta(dieta.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

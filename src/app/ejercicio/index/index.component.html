@@ -1,0 +1,30 @@
+<h1>
+  <nav>
+    <a href="/ejercicio/create" *ngIf="clave !=null"  id="ejercicio">Crear rutina</a>
+  </nav>  
+</h1>
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tipo de rutina</th>
+        <th>Dias de la semana</th>
+        <th>Ejercicios</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ejercicio of listaEjercicios">
+        <td>{{ejercicio.id}}</td>
+        <td>{{ejercicio.routine_type}}</td>
+        <td>{{ejercicio.days_of_week}}</td>
+        <td>{{ejercicio.exercises}}</td>
+        <td>
+          
+          <button type="button" id="eli" (click)="editarEjercicio(ejercicio.id)">Editar</button>
+          <button type="button" id="bor" (click)="eliminarEjercicio(ejercicio.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

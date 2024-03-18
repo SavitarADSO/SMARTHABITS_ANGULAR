@@ -1,0 +1,28 @@
+<h1>Lista de Calorias</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre de usuario</th>
+      <th>Calorias de mantenimiento</th>
+      <th>Calorias de volumen</th>
+      <th>Calorias de definicion</th>
+      <th>Calorias de recomposición</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of listaCalorias">
+      <td>{{user.id}}</td>
+      <td>{{user.users_id}}</td>
+      <td>{{user.maintenance_calories}}</td>
+      <td>{{user.bulking_calories}}</td>
+      <td>{{user.cutting_calories}}</td>
+      <td>{{user.recomposition_calories}}</td>
+
+      <td>
+        <button type="button" id="bor" (click)="deleteCalorias(user.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

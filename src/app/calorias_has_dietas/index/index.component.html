@@ -1,0 +1,22 @@
+<h1>Relacion usuarios con dietas</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre de usuario</th>
+      <th>Dieta</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of listaCaloriasDietas">
+      <td>{{user.id}}</td>
+      <td>{{user.caloria_id}}</td>
+      <td>{{user.dieta_id}}</td>
+
+      <td>
+        <button type="button" id="bor" (click)="deleteCaloriasDietas(user.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

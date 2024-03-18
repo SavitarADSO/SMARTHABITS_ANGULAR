@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form [formGroup]="ejercicioForm" (ngSubmit)="agregarEjercicio()" action="" class="form-ficha example-form" id="formenfermedad">
+        <title>Crear rutina</title>
+        <h1>Rutina de ejercicio</h1>
+
+        <div id="dietadiv">
+            
+            <p>Tipo de rutina </p>
+
+            <mat-form-field class="example-form-field">
+                <input formControlName="routine_type" matInput type="text" name="routine_type">
+                <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field><br>
+            <p>Dias de la semana </p>
+
+            <mat-form-field class="example-form-field">
+                <input formControlName="days_of_week" matInput type="text" name="days_of_week">
+                <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field><br>
+            <p>Ejercicios</p>
+
+            <mat-form-field class="example-form-field">
+                <input formControlName="exercises" matInput type="text" name="exercises">
+                <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field><br>
+        </div>
+
+        <button mat-raised-button color="primary">Crear</button>
+    </form>
+</body>
+
+</html>

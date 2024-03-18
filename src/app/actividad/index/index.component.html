@@ -1,0 +1,27 @@
+<h1>
+  <nav>
+    <a href="/actividad/create" *ngIf="clave !=null"  id="actividad">Crear actividad</a>
+  </nav>
+
+</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nivel de actividad</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let actividad of listaActividades">
+      <td>{{actividad.id}}</td>
+      <td>{{actividad.nivel}}</td>
+      <td>
+        
+        <button type="button" id="eli" (click)="editarActividad(actividad.id)">Editar</button>
+        <button type="button" id="bor" (click)="eliminarActividad(actividad.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

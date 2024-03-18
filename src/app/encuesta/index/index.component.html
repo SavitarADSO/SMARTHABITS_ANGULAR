@@ -1,0 +1,31 @@
+<h1>Lista de encuestas</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre del usuario</th>
+      <th>Nivel de actividad fisica</th>
+      <th>Edad </th>
+      <th>Peso</th>
+      <th>Genero</th>
+      <th>Estatura</th>
+      <th>Enfermedades</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of listaEncuestas">
+      <td>{{user.id}}</td>
+      <td>{{user.user_id}}</td>
+      <td>{{user.actividad_id}}</td>
+      <td>{{user.edad}}</td>
+      <td>{{user.peso}}</td>
+      <td>{{user.genero}}</td>
+      <td>{{user.estatura}}</td>
+      <td>{{user.enfermedades}}</td>
+      <td>
+        <button type="button" id="bor" (click)="deleteEncuestas(user.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

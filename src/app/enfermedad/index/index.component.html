@@ -1,0 +1,25 @@
+<h1>
+  <nav>
+    <a href="/enfermedad/create" *ngIf="clave !=null"  id="enfermedad">Crear enfermedad</a>
+  </nav>
+</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let enfermedad of listaEnfermedades">
+      <td>{{enfermedad.id}}</td>
+      <td>{{enfermedad.nombre}}</td>
+      <td>
+        
+        <button type="button" id="eli" (click)="editarEnfermedad(enfermedad.id)">Editar</button>
+        <button type="button" id="bor" (click)="eliminarEnfermedad(enfermedad.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

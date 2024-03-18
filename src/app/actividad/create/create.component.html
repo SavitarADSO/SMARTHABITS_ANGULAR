@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form [formGroup]="actividadForm"(ngSubmit)="agregarActividad()" action="" class="form-ficha example-form" id="formactividad">
+        <div>
+            <title>Crear nivel de Actividad Fisica</title>
+            <h1>Nombre del Nivel de actividad Fisica</h1>
+            <mat-form-field class="example-form-field">
+                <input formControlName="nivel" matInput type="text" name="nivel">
+                <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary">Crear</button>
+    </form>
+    
+</body>
+
+</html>
