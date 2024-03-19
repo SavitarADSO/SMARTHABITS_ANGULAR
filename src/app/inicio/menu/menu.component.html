@@ -1,15 +1,14 @@
 <h1>SMART HABITS ADMINISTRACIÓN</h1>
 
 <nav>
-    
+
+    <a href="/users/index" *ngIf="clave !=null"  id="users">Usuarios</a>    
 
     <a href="/enfermedad/index" *ngIf="clave !=null"  id="enfermedad">Enfermedades</a>
 
 
     <a href="/actividad/index" *ngIf="clave !=null"  id="actividad">Actividades</a>
 
-
-    <a href="/users/index" *ngIf="clave !=null"  id="users">Usuarios</a>
 
     <a href="/encuesta/index" *ngIf="clave !=null"  id="encuesta">Encuestas</a>
 
@@ -23,7 +22,6 @@
     <a href="/calorias_has_dietas/index" *ngIf="clave !=null"  id="caloriaDieta">Calorias y Dietas</a>
 
     <a href="/calorias_has_dietas/create" *ngIf="clave !=null"  id="caloriaDieta">Relacionar dieta y calorias</a>
-
 
 
     <button type="button" *ngIf="clave !=null" (click)="logout()"  id="logout">Cerrar Sesión</button>

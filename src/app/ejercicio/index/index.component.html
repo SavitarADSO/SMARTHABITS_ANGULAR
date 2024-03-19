@@ -1,9 +1,10 @@
 <h1>
   <nav>
-    <a href="/ejercicio/create" *ngIf="clave !=null"  id="ejercicio">Crear rutina</a>
-  </nav>  
+    <a href="/ejercicio/create" *ngIf="clave !=null" id="ejercicio">Crear rutina</a>
+  </nav>
 </h1>
-<table>
+
+  <table>
     <thead>
       <tr>
         <th>ID</th>
@@ -20,11 +21,10 @@
         <td>{{ejercicio.days_of_week}}</td>
         <td>{{ejercicio.exercises}}</td>
         <td>
-          
+
           <button type="button" id="eli" (click)="editarEjercicio(ejercicio.id)">Editar</button>
           <button type="button" id="bor" (click)="eliminarEjercicio(ejercicio.id)">Eliminar</button>
         </td>
       </tr>
     </tbody>
   </table>
-  
