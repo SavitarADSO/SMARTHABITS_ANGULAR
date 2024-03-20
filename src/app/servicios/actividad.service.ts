@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ActividadService {
-  url='http://smarthabits.api.adsocidm.com/api/actividad';
+  url='https://smarthabits.api.adsocidm.com/api/actividad';
 
   constructor(private http:HttpClient){}
 

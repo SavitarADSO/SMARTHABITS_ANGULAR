@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UsersService {
 
-  url='http://smarthabits.api.adsocidm.com/api/auth/user';
+  url='https://smarthabits.api.adsocidm.com/api/auth/user';
 
   constructor(private http:HttpClient){}
 

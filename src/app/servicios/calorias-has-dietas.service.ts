@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CaloriasHasDietasService {
 
-  url='http://smarthabits.api.adsocidm.com/api/caloriasDietas';
+  url='https://smarthabits.api.adsocidm.com/api/caloriasDietas';
   
   constructor(private http:HttpClient){
   }

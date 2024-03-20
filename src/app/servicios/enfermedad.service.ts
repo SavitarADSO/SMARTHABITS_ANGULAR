@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 
 export class EnfermedadService {
 
-  url='http://smarthabits.api.adsocidm.com/api/enfermedades';
+  url='https://smarthabits.api.adsocidm.com/api/enfermedades';
 
   constructor(private http:HttpClient){}
 

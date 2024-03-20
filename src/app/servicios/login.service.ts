@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginService {
-  url = 'http://smarthabits.api.adsocidm.com/api/auth'
+  url = 'https://smarthabits.api.adsocidm.com/api/auth'
 
   constructor( private http: HttpClient) { }
 

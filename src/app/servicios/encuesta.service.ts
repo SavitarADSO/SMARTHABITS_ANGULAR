@@ -7,7 +7,7 @@ import { Observable } from 'rxjs'
   providedIn: 'root'
 })
 export class EncuestaService {
-  url='http://smarthabits.api.adsocidm.com/api/encuestass';
+  url='https://smarthabits.api.adsocidm.com/api/encuestass';
 
   constructor(private http:HttpClient){}
 
