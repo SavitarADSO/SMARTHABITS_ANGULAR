@@ -17,19 +17,26 @@
             <p>Tipo de rutina </p>
 
             <mat-form-field class="example-form-field">
-                <input formControlName="routine_type" matInput type="text" name="routine_type">
-                <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                    <mat-icon>close</mat-icon>
-                </button>
+                <select formControlName="routine_type" matNativeControl>
+                    <option value="Gym">Gym</option>
+                    <option value="Calistenia">Calistenia</option>
+                </select>
             </mat-form-field><br>
+
             <p>Dias de la semana </p>
 
             <mat-form-field class="example-form-field">
-                <input formControlName="days_of_week" matInput type="text" name="days_of_week">
-                <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                    <mat-icon>close</mat-icon>
-                </button>
+                <select formControlName="days_of_week" matNativeControl>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
             </mat-form-field><br>
+
             <p>Ejercicios</p>
 
             <mat-form-field class="example-form-field">
