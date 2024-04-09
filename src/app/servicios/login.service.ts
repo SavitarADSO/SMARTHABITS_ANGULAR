@@ -15,7 +15,7 @@ export class LoginService {
   
 
   login(email: any, password: any): Observable<any>{
-    return this.http.post(this.url+"/login",{email: email, password: password});
+    return this.http.post(this.url+"/login/administrador",{email: email, password: password});
   }
 
   logout(): Observable<any>{
