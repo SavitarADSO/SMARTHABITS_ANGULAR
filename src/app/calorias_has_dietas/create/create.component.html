@@ -11,7 +11,7 @@
 
             <p>Seleccione una dieta</p>
             <select formControlName="dieta_id">
-                <option *ngFor="let dieta of dietas" [value]="dieta.id">{{dieta.recommended_foods}}</option>
+                <option *ngFor="let dieta of dietas" [value]="dieta.id">{{dieta.diet_type}}</option>
             </select><br>
         </div>
 
